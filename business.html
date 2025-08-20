@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mr Build It Hardware | Shop / Orders</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Mr Build It Hardware</h1>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="business.html">Shop / Orders</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="form-section" aria-labelledby="orderFormTitle">
+        <h2 id="orderFormTitle">Place Your Order</h2>
+        <form id="orderForm" action="#" method="post">
+          <fieldset class="form-section">
+            <legend>Customer Details</legend>
+            <label for="custName">Full Name</label>
+            <input type="text" id="custName" name="custName" placeholder="Enter your full name" required />
+            <label for="custPhone">Phone</label>
+            <input type="tel" id="custPhone" name="custPhone" placeholder="e.g. 063 708 7784" required />
+            <label for="custAddress">Delivery Address</label>
+            <input type="text" id="custAddress" name="custAddress" placeholder="Street & Area" />
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Products</legend>
+            <div>
+              <input type="checkbox" id="pHammer" name="product" value="Hammer" data-price="129.99" />
+              <label for="pHammer">Steel Hammer (R129.99)</label>
+              <label for="qHammer">Qty</label>
+              <input type="number" id="qHammer" name="qHammer" min="0" value="0" />
+            </div>
+            <div>
+              <input type="checkbox" id="pDrill" name="product" value="Drill" data-price="999.00" />
+              <label for="pDrill">Cordless Drill (R999.00)</label>
+              <label for="qDrill">Qty</label>
+              <input type="number" id="qDrill" name="qDrill" min="0" value="0" />
+            </div>
+            <div>
+              <input type="checkbox" id="pPaint" name="product" value="Paint" data-price="549.50" />
+              <label for="pPaint">Wall Paint 20L (R549.50)</label>
+              <label for="qPaint">Qty</label>
+              <input type="number" id="qPaint" name="qPaint" min="0" value="0" />
+            </div>
+            <div>
+              <input type="checkbox" id="pLadder" name="product" value="Ladder" data-price="799.00" />
+              <label for="pLadder">Aluminium Ladder (R799.00)</label>
+              <label for="qLadder">Qty</label>
+              <input type="number" id="qLadder" name="qLadder" min="0" value="0" />
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Fulfilment</legend>
+            <div>
+              <input type="radio" id="optDelivery" name="fulfil" value="Delivery" checked />
+              <label for="optDelivery">Delivery (R80 if subtotal < R1500)</label>
+            </div>
+            <div>
+              <input type="radio" id="optPickup" name="fulfil" value="Pickup" />
+              <label for="optPickup">Pickup (Free)</label>
+            </div>
+            <label for="deliveryDate">Preferred Date</label>
+            <input type="date" id="deliveryDate" name="deliveryDate" />
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Discount</legend>
+            <label for="discountCode">Promo Code (optional)</label>
+            <input type="text" id="discountCode" name="discountCode" placeholder="e.g. BUILD5"/>
+            <p class="notice">Use BUILD5 for 5% off orders over R500.</p>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Payment</legend>
+            <label for="paymentMethod">Payment Method</label>
+            <select id="paymentMethod" name="paymentMethod">
+              <option value="cash">Cash</option>
+              <option value="card">Card</option>
+              <option value="eft">EFT</option>
+            </select>
+          </fieldset>
+
+          <section class="form-section" aria-labelledby="summaryTitle">
+            <h3 id="summaryTitle">Order Summary</h3>
+            <div id="summaryOutput" class="notice">Select products and quantities to see totals.</div>
+          </section>
+
+          <div class="form-section">
+            <button type="submit">Submit Order</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>&copy; 2025 Mr Build It Hardware • Tzaneen, Washington Street 087 • Phone: 063 708 7784</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
