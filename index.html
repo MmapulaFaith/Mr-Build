@@ -43,44 +43,6 @@
   </div>
 </section>
 
-<style>
-/* Slideshow container like a video frame */
-#slideshow {
-  position: relative;
-  width: 100%;
-  height: 400px;        /* adjust height to look like video player */
-  overflow: hidden;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background: #000;     /* black background like a video */
-}
-
-/* All images stacked on top of each other */
-#slideshow img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;    /* makes image fill container (like video) */
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-/* Show active image */
-#slideshow img.active {
-  opacity: 1;
-}
-</style>
-
-<script>
-let slides = document.querySelectorAll("#slideshow img");
-let index = 0;
-setInterval(() => {
-  slides[index].classList.remove("active");
-  index = (index + 1) % slides.length;
-  slides[index].classList.add("active");
-}, 3000); // change every 3 seconds
-</script>
 
       <section aria-labelledby="featured" class="form-section">
         <h3 id="featured">Featured Products</h3>
