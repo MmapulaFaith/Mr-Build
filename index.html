@@ -29,25 +29,47 @@
 <section class="form-section">
   <h3>Store Promo Slideshow </h3>
   <div id="slideshow">
-     <div class="card"><img src="hammer.jpg" alt="Hammer.jpg"/>
-            <p>Steel Hammer</p></div>
-     <div class="card"><img src="drill.jpg" alt="Drill.jpg"/>
-            <p>Cordless Drill</p></div>
-     <div class="card"><img src="paint.jpg" alt="Paint.jpgr"/>
-            <p>Wall Paint 20L</p></div>
-    <div class="card"><img src="ladder.jpg" alt="Ladder.jpg"/>
-            <p>Aluminium Ladder</p></div>
-    
+   <section class="form-section">
+  <h3>Store Promo Slideshow</h3>
+  <div id="slideshow">
+    <img src="images/hammer.jpg" 
+      alt="Hammer" class="active">
+    <img src="images/ladder.jpg" 
+      alt="Ladder">
+    <img src="images/drill.jpg"
+      alt="Drill">
+    <img src="images/paint20l.jpg"
+      alt="Paint 20L">
   </div>
 </section>
 
 <style>
-#slideshow { position: relative; width: 100%; height: 400px; overflow: hidden; }
-#slideshow img {
-  position: absolute; width: 100%; height: 100%; object-fit: contain;
-  opacity: 0; transition: opacity 1s ease-in-out;
+/* Slideshow container like a video frame */
+#slideshow {
+  position: relative;
+  width: 100%;
+  height: 400px;        /* adjust height to look like video player */
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: #000;     /* black background like a video */
 }
-#slideshow img.active { opacity: 1; }
+
+/* All images stacked on top of each other */
+#slideshow img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* makes image fill container (like video) */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Show active image */
+#slideshow img.active {
+  opacity: 1;
+}
 </style>
 
 <script>
